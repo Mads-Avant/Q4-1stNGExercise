@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title</title>
+    <title></title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link href="./style.css" rel="stylesheet" type="text/css" />
@@ -36,7 +36,8 @@
         function drawSquare() {
 
             // sample use of handlbars 
-            const s = {{sideLength}};
+            const s = {{legOne}};
+            const t = {{legTwo}};
 
             let canvas = document.getElementById("mycanvas");
             canvas.width = (s + 50);
@@ -48,13 +49,12 @@
             // moving to the starting point
             ctx.moveTo(o, o);
             ctx.lineTo(o, o + s);
-            ctx.lineTo(o + s, o + s)
-            ctx.lineTo(o + s, o);
-            ctx.lineTo(o, o);
+            ctx.lineTo(o + s, o + t)
+            ctx.lineTo(o + t, o);
 
             // for placing text
             ctx.fillText(s, o + (s / 2), o + s)
-            ctx.fillText(s, o + 0, o + s / 2) 
+            ctx.fillText(t, o + 0, o + t / 2) 
             
             // to actually display the triangle
             ctx.stroke();
